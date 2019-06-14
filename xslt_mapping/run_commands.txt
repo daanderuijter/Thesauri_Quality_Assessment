@@ -1,0 +1,9 @@
+java -jar c:\saxon\saxon9he.jar -s:data/authexport_TOPIC_20181213.xml -xsl:library_MARC_to_SKOS.xsl -o:output/rma-skos-lib.rdf
+java -jar c:\saxon\saxon9he.jar -s:data/authexport_TOPIC_20181213.xml -xsl:library_MARC_to_SKOS_amalgame.xsl -o:output/rma-skos-lib-amalgame.rdf
+java -jar c:\saxon\saxon9he.jar -s:data/rma-skos-materials.rdf -xsl:Quinten_SKOS_to_amalgame_SKOS.xsl -o:output/rma-skos-materials-amalgame.rdf
+java -jar c:\saxon\saxon9he.jar -s:data/rma-skos-thesaurus.rdf -xsl:Quinten_SKOS_to_amalgame_SKOS.xsl -o:output/rma-skos-thesaurus-amalgame.rdf
+java -jar c:\saxon\saxon9he.jar -s:data/rma-skos-thesaurus.rdf -xsl:Amalgame_SKOS_scheme_selector.xsl -o:output/rma-skos-thesaurus-amalgame-schemes-selected.rdf
+
+"rma-skos-lib.rdf" is placed in the output folder, from which it can be used by the analytical scripts in the folders "tree_analysis", "thesaurus" and "skosify"
+
+All "amalgame.rdf" files have to be loaded into Amalgame manually, Amalgame will only recognize the different concepts schemes after running "tree_analysis/tree-analysis-add-schemes.py" 

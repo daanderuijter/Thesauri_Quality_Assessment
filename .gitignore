@@ -1,0 +1,9 @@
+out/
+xslt_mapping/output/
+tree_analysis/output/
+skosify/output/
+thesaurus/output/
+backups/
+
+.DS_Store
+*.pyc
